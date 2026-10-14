@@ -74,8 +74,8 @@ type pane struct {
 }
 
 // newTerminal is terminal.New, a seam for tests that must not start a
-// shell.
-var newTerminal = terminal.New
+// shell. The shell it starts is watched for (see shellprocs.go).
+var newTerminal = watchedTerminal
 
 var sessionIDs int
 

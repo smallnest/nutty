@@ -200,7 +200,7 @@ func (a *app) requestClose(s *session) {
 	if s == nil {
 		return
 	}
-	if a.confirmClosingTab() {
+	if a.closingAsks(s) {
 		a.pendingClose = s
 		return
 	}
